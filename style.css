@@ -2,3 +2,141 @@
     margin: 0;
     padding: 0;
 }
+a {
+    text-decoration: none;
+    color: inherit;
+}
+body {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: black;
+        
+        
+
+}
+.content {
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+
+}
+.button {
+    background-color: #ff0000;
+    width: 235px;
+    height: 70px;
+    cursor: pointer;
+    color: #ffffff;
+    border-radius: 5px;
+    border: none;
+    font-size: 22px;
+}
+.popup {
+    display: none;
+    /* padding: ; */
+}
+.popup.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .8);
+}
+
+.popup-wrapper {
+    background: no-repeat url('image/file.jpg');
+    background-position: bottom -2px left 30px ;
+    background-size: 430px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    width: 909px;
+    padding: 30px 50px;
+    position: relative;
+}
+.popup-close{
+    position: absolute;
+    right: 21px;
+    top: 21px;
+    text-align: right;
+    color: #ff0000;
+    font-size: 44px;
+    cursor: pointer;
+    line-height: 0.5;
+}
+.popup-inner-title {
+    font-size: 36px;
+    margin-bottom: 53px;
+    font-weight: 900;
+    width: 50%;
+}
+
+.popup-inner-content {
+    display: flex;
+    justify-content: space-between;
+}
+.images {
+    display: flex;
+    flex-direction: column;
+}
+.form {
+    display: flex;
+    flex-direction: column;
+}
+.label {
+    margin-bottom: 10px;
+}
+.input {
+    margin-bottom:30px;
+    border-radius: 5px;
+    border: 1px solid #adadad;
+    padding: 11px 18px;
+    font-size: 20px;
+}
+::placeholder {
+    opacity: 1;
+    color:#adadad
+}
+.form-submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 20px;
+    background-color: #38d671 ;
+    padding: 16px 53px;
+    /* vertical-align: middle; */
+    text-align: center;
+    border-radius: 5px;
+    border: none;
+    position: relative;
+    z-index: 10;
+    transform-style: preserve-3d;
+    cursor: pointer;
+
+   
+
+}
+.button-text {
+    
+    color: #ffffff;
+    font-size: 25px;
+
+}
+.form-submit::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    background-color: #36aa60;
+    border-radius: 11px;
+    z-index: 2;
+    transform: translateZ(-1px);
+}
