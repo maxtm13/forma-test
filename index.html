@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300..800&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
@@ -24,33 +24,34 @@
                 <div class="popup-inner-content">
                     <div class="images">
                         <div class="icons">
-                            <img src="image/image1.png" alt="icon">
-                            <img src="image/image2.png" alt="icon">
-                            <img src="image/image3.png" alt="icon">
-                            <img src="image/image4.png" alt="icon">
-                            <img src="image/image5.png" alt="icon">
-                            <img src="image/image6.png" alt="icon">
-                            <img src="image/image7.png" alt="icon">
-
+                            <img class="icon-pict" src="image/image7.png" alt="icon">
+                            <img class="icon-pict" src="image/image6.png" alt="icon">
+                            <img class="icon-pict" src="image/image3.png" alt="icon">
+                            <img class="icon-pict" src="image/image4.png" alt="icon">
+                            <img class="icon-pict" src="image/image5.png" alt="icon">
+                            <img class="icon-pict" src="image/image2.png" alt="icon">
+                            <img class="icon-pict" src="image/image1.png" alt="icon">
                         </div>
-                        <!-- <div class="pict">
-                            <img src="image/file.jpg" alt="picture" srcset="">
-                        </div> -->
+
                     </div>
                     <div class="popup-form">
-                        <form class="form" action="sender.php" method="get">
+                        <form class="form" action="sender.php" method="post">
                             <label class="label" for="email">Получите набор файлов
                             для руководителя:</label>
-                            <input  class="input" type="text" id="email" placeholder="E-mail">
+                            <input  class="input" type="text" id="email" name="email" placeholder="E-mail">
                             <label class="label" for="phone">Введите телефон для подтверждения доступа:</label>
-                            <input  class="input" type="tel" id="phone" required placeholder="+7 (000) 000-00-00" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}">
-                            <button href="#" class="form-submit" type="submit">
-                                <div class="button-text">
-                                    Скачать файлы 
-                                </div>
+                            <input  class="input" type="tel" id="phone" name="phone" required placeholder="+7 (000) 000-00-00" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}">
+                            <button class="form-submit" type="submit">
+                                <div class="button-text">Скачать файлы</div>
                                 <img src='/image/button_icon.png' class="button-icon">
                             </button>
-                            <div class="info-text"></div>
+                            <div class="info-text">
+                                <ul class="items-list">
+                                    <li class="item">PDF 4,7 MB</li>
+                                    <li class="item">DOC 0,8 MB</li>
+                                    <li class="item">XLS 1,2 MB</li>
+                                </ul>
+                            </div>
 
                         </form>
                     </div>

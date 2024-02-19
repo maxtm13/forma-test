@@ -23,6 +23,9 @@ body {
     padding: 20px;
 
 }
+.content.sender {
+    font-size: 36px;
+}
 .button {
     background-color: #ff0000;
     width: 235px;
@@ -51,10 +54,8 @@ body {
 }
 
 .popup-wrapper {
-    background: no-repeat url('image/file.jpg');
-    background-position: bottom -2px left 30px ;
     background-size: 430px;
-    background-color: #ffffff;
+    background: #ffffff url('image/file.jpg') no-repeat bottom -4px left 30px;
     border-radius: 20px;
     width: 909px;
     padding: 30px 50px;
@@ -73,8 +74,8 @@ body {
 .popup-inner-title {
     font-size: 36px;
     margin-bottom: 53px;
-    font-weight: 900;
-    width: 50%;
+    font-weight: 800;
+    width: 56%;
 }
 
 .popup-inner-content {
@@ -84,6 +85,9 @@ body {
 .images {
     display: flex;
     flex-direction: column;
+}
+.icon-pict:nth-child(n+1) {
+    margin-left: 11px;
 }
 .form {
     display: flex;
@@ -118,16 +122,13 @@ body {
     z-index: 10;
     transform-style: preserve-3d;
     cursor: pointer;
-
-   
-
 }
+
 .button-text {
-    
     color: #ffffff;
     font-size: 25px;
-
 }
+
 .form-submit::before {
     content: '';
     width: 100%;
@@ -139,4 +140,37 @@ body {
     border-radius: 11px;
     z-index: 2;
     transform: translateZ(-1px);
+}
+.info-text {
+    text-align: center;
+}
+.items-list {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding: 19px 90px 40px;
+}
+.item {
+    font-size: 9px;
+    color: #808080;
+}
+.success {
+    color: green;
+}
+.title {
+    margin-bottom: 60px;
+}
+.warning {
+    color:orangered;
+}
+.back {
+    background-color: gray;
+    color: white;
+    width: 200px;
+    height: 50px;
+    border-radius: 5px;
+    border: none;
+    padding: 10px 130px;
+    cursor: pointer;
+
 }
