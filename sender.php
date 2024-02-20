@@ -14,12 +14,10 @@
 <?
     $email = htmlspecialchars($_POST['email']);
     $phone = htmlspecialchars($_POST['phone']);
-    //echo('Ваш email: ' . $email . ', Ваш телефон: ' . $phone);
 
-    //
     $to = 'maxtm1@yandex.ru';
     $subject = 'заявка ' . 'Тихонов';
-    $message = 'Email из формы: ' . $email . "\n" . ' Телефон: ' . $phone;
+    $message = 'Email из формы: ' . $email . "\r\n" . 'Телефон: ' . $phone;
     $headers = 'From: webmaster@forma-test' . "\r\n" .
         'Reply-To: webmaster@forma-test' . "\r\n" .
         'X-Mailer: PHP/' . phpversion();
