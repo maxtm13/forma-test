@@ -11,18 +11,20 @@
 </head>
 <body>
 
-<?
-    $email = htmlspecialchars($_POST['email']);
-    $phone = htmlspecialchars($_POST['phone']);
+    <?//Email sender
+    echo($_SERVER['SERVER_NAME']);
+     /*   $email = htmlspecialchars($_POST['email']);
+        $phone = htmlspecialchars($_POST['phone']);
+        require_once 'amocrm.php';
 
-    $to = 'maxtm1@yandex.ru';
-    $subject = 'заявка ' . 'Тихонов';
-    $message = 'Email из формы: ' . $email . "\r\n" . 'Телефон: ' . $phone;
-    $headers = 'From: webmaster@forma-test' . "\r\n" .
-        'Reply-To: webmaster@forma-test' . "\r\n" .
-        'X-Mailer: PHP/' . phpversion();
-    ?>
-    <div class="content sender">
+        $to = 'maxtm1@yandex.ru';
+        $subject = 'заявка ' . 'Тихонов';
+        $message = 'Email из формы: ' . $email . "\r\n" . 'Телефон: ' . $phone . "\r\n" . json_encode($data);
+        $headers = 'From: webmaster@forma-test' . "\r\n" .
+            'Reply-To: webmaster@forma-test' . "\r\n" .
+            'X-Mailer: PHP/' . phpversion();
+    */?>
+    <!-- <div class="content sender">
         <?
         if (mail($to, $subject, $message, $headers)) {?>
             <h2 class="title success">Ваше сообщение отправленно!</h2>
@@ -31,6 +33,6 @@
             <h2 class="title warning">Сообщение не отправленно, попробуйте позже</h2>
         <? } ?>
         <a href="/" class="back">ОК</a>
-    </div>
+    </div> -->
 </body>
 </html>
