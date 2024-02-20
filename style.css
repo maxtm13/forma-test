@@ -86,7 +86,7 @@ body {
     display: flex;
     flex-direction: column;
 }
-.icon-pict:nth-child(n+1) {
+.icon-pict:nth-child(n+2) {
     margin-left: 11px;
 }
 .form {
@@ -174,3 +174,66 @@ body {
     cursor: pointer;
 
 }
+
+@media (max-width: 500px) {
+   .content {
+       width: 100%;
+       padding: 20px 0;
+   }
+    .popup-wrapper {
+        background-size: 227px;
+        background-position: top 14px center;
+        padding-left: 20px;
+        padding-right: 20px;
+        text-align: center;
+        position: relative;
+        font-size: 13px;
+        padding-bottom: 30px;
+    }
+    .popup-inner-title {
+        font-size: 20px;
+        width: 100%;
+        margin-top: 180px;
+        margin-bottom: 28px;
+    }
+    .popup-inner-content {
+        /*display: none;*/
+    }
+    .images {
+        position: absolute;
+        top: 154px;
+        left: 0;
+        right: 0;
+        /*display: none;*/
+    }
+    .icon-pict {
+        width: 30px;
+    }
+    .icon-pict:nth-child(n+2) {
+        margin-left: 9px;
+    }
+    .label {
+        text-align: left;
+        margin-bottom: 7px;
+    }
+    .input {
+        margin-bottom: 23px;
+    }
+    .input:nth-last-child(2) {
+        margin-bottom: 12px;
+    }
+    .form-submit {
+        padding: 12px 38px;
+    }
+    .button-text{
+        font-size: 20px;
+     }
+    .button-icon {
+        width: 28px;
+    }
+    .info-text {
+        display: none;
+    }
+
+}
+
