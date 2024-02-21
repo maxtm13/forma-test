@@ -2,39 +2,20 @@
 
 require_once 'access.php';
 
-// $name = 'Заполнена заявка';
-// $phone = '+380123456789';
-// $email = 'email@gmail.com';
-// $target = 'Цель';
-// $company = 'Название компании';
-
-// $custom_field_id = 454021;
-// $custom_field_value = 'тест';
-
-// $ip = '1.2.3.4';
-// $domain = 'site.ua';
-// $price = 0;
-// $pipeline_id = 7786198;
-// $user_amo = 0;
-
-// $utm_source   = '';
-// $utm_content  = '';
-// $utm_medium   = '';
-// $utm_campaign = '';
-// $utm_term     = '';
-// $utm_referrer = '';
-$user = 31561882;
+$user = 10658650;
 $domen = $_SERVER['SERVER_NAME'];
+$nameForm;
 $data = [
     [
-        "name" => "Форма с сайта" + $domen,
+        "name" => "Форма с сайта " . $domen,
+        "price" => 500,
         "responsible_user_id" => $user,
         "_embedded" => [
             "metadata" => [
                 "category" => "forms",
                 "form_id" => 1,
                 "form_name" => "Форма на сайте",
-                "form_page" => "https://test.top-site.info",
+                "form_page" => "Новая заявка",
                 "form_sent_at" => strtotime(date("Y-m-d H:i:s")),
             ],
             "contacts" => [
@@ -65,7 +46,25 @@ $data = [
                 ]
             ],
         ],
-       
+        
+        "custom_fields_values"=> [
+            [
+                "field_id" => 250363,
+                "values" => [
+                    [
+                        "value" => $email
+                    ]
+                ]
+            ],
+            [
+                "field_id" => 250365,
+                "values" => [
+                    [
+                        "value" => $phone
+                    ]
+                ]
+            ],
+        ],
     ]
 ];
 
@@ -103,12 +102,3 @@ $errors = [
 ];
 
 if ($code < 200 || $code > 204) die( "Error $code. " . (isset($errors[$code]) ? $errors[$code] : 'Undefined error') );
-
-
-$Response = json_decode($out, true);
-// $Response = $Response['_embedded']['items'];
-$output = 'ID добавленных элементов списков:' . PHP_EOL;
-foreach ($Response as $v)
-    if (is_array($v))
-        $output .= $v['id'] . PHP_EOL;
-return $output;
