@@ -11,16 +11,17 @@
 </head>
 <body>
 
-    <?//Email sender
-    echo($_SERVER['SERVER_NAME']);
+    <?
         $email = htmlspecialchars($_POST['email']);
         $phone = htmlspecialchars($_POST['phone']);
-        //require_once 'amocrm.php';
-
-        $to = 'maxtm1@yandex.ru';
+        //amoCRM integration
+        require_once 'amocrm.php';
+        
+        //Email sender
+        $to = 'order@salesgenerator.pro, maxtm1@yandex.ru';
         $subject = 'заявка ' . 'Тихонов';
-        $message = 'Email из формы: ' . $email . "\r\n" . 'Телефон: ' . $phone . "\r\n" . json_encode($data);
-        $headers = 'From: webmaster@forma-test' . "\r\n" .
+        $message = 'Email из формы: ' . $email . "\r\n" . 'Телефон: ' . $phone . "\r\n";
+        $headers = 'Content-Type: text/html; charset=utf-8' . "\r\n" . 'From: webmaster@forma-test' . "\r\n" .
             'Reply-To: webmaster@forma-test' . "\r\n" .
             'X-Mailer: PHP/' . phpversion();
     ?>
