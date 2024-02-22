@@ -19,11 +19,7 @@
         
         //Email sender
 
-<<<<<<< HEAD
         $to = 'order@salesgenerator.pro, maxtm1@yandex.ru';
-=======
-        $to = 'webmaster@top-site.info, maxtm1@yandex.ru';
->>>>>>> d18fe566ef9e5bf1d3d704f43992926702c0d980
         $subject = 'заявка ' . 'Тихонов';
         $message = 'Email из формы: ' . $email . "\r\n" . 'Телефон: ' . $phone . "\r\n";
         $headers = 'Content-Type: text/html; charset=utf-8' . 'From: webmaster@forma-test' . "\r\n" .
