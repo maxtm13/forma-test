@@ -18,10 +18,11 @@
         require_once 'amocrm.php';
         
         //Email sender
-        $to = 'webmaster@top-site.info, maxtm1@yandex.ru';
+
+        $to = 'order@salesgenerator.pro, maxtm1@yandex.ru';
         $subject = 'заявка ' . 'Тихонов';
         $message = 'Email из формы: ' . $email . "\r\n" . 'Телефон: ' . $phone . "\r\n";
-        $headers = 'From: webmaster@forma-test' . "\r\n" .
+        $headers = 'Content-Type: text/html; charset=utf-8' . 'From: webmaster@forma-test' . "\r\n" .
             'Reply-To: webmaster@forma-test' . "\r\n" .
             'X-Mailer: PHP/' . phpversion();
     ?>
